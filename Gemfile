@@ -31,7 +31,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+#gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
@@ -56,6 +56,13 @@ group :development do
   gem 'web-console', '~> 2.0'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+  gem 'spring', group: :development
 end
-
+# Used devise for user authentication
+  gem 'devise', '3.4.1'
+  
+# Used stripe for handling payments  
+  gem 'stripe', '1.16.1'
+  
+# Used figaro to hide secret keys
+  gem 'figaro', '1.0.0'
